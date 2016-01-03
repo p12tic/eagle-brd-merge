@@ -3,8 +3,8 @@ Overview
 --------
 
 This command-line tool merges several board files produced by CadSoft Eagle CAD
-software into one, effectively reimplementing the "Import Eagle Drawing" option
-of the program itself, but without the board size limit in the light and
+software into one, effectively reimplementing the panelize.url script included
+in the program itself, but without the board size limit in the light and
 freeware editions of the program.
 
 The tool helps to perform panelization of one or several designs into a board
