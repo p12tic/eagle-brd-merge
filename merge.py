@@ -374,7 +374,7 @@ def merge_xml_packages(out_el, in_el, infile):
             else:
                 if xml_tree_compare(out_child, child) != 0:
                     err = "Embedded libraries contain different packages of the same name {0}\n".format(child.get("name"))
-                    err += etree.tostring(el_child).decode() + "\n"
+                    err += etree.tostring(out_child).decode() + "\n"
                     err += etree.tostring(child).decode()
                     print_file_error_and_exit(infile, child, err)
         else:
