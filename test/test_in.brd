@@ -63,6 +63,7 @@
 <hole x="29.21" y="9.652" drill="0.6"/>
 <text x="31.75" y="9.144" size="1.778" layer="21">text</text>
 <text x="35.814" y="5.08" size="1.778" layer="22" rot="MR0">text</text>
+<rectangle x1="19.304" y1="6.096" x2="25.654" y2="10.668" layer="16"/>
 </plain>
 <libraries>
 <library name="rcl">

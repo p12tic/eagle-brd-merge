@@ -54,6 +54,7 @@
 <hole x="29.21" y="9.652" drill="0.6"/>
 <text x="31.75" y="9.144" size="1.778" layer="21">text</text>
 <text x="35.814" y="5.08" size="1.778" layer="22" rot="MR0">text</text>
+<rectangle x1="19.304" y1="6.096" x2="25.654" y2="10.668" layer="16"/>
 <wire x1="100.0" y1="0.0" x2="72.06" y2="0.0" width="0.2032" layer="20"/>
 <wire x1="72.06" y1="0.0" x2="72.06" y2="40.64" width="0.2032" layer="20"/>
 <wire x1="72.06" y1="40.64" x2="100.0" y2="40.64" width="0.2032" layer="20"/>
@@ -61,6 +62,7 @@
 <hole x="90.348" y="29.21" drill="0.6"/>
 <text x="90.856" y="31.75" size="1.778" layer="21" rot="R90">text</text>
 <text x="94.92" y="35.814" size="1.778" layer="22" rot="MR270">text</text>
+<rectangle x1="93.904" y1="19.304" x2="89.332" y2="25.654" layer="16"/>
 <wire x1="100.0" y1="100.0" x2="100.0" y2="72.06" width="0.2032" layer="20"/>
 <wire x1="100.0" y1="72.06" x2="59.36" y2="72.06" width="0.2032" layer="20"/>
 <wire x1="59.36" y1="72.06" x2="59.36" y2="100.0" width="0.2032" layer="20"/>
@@ -68,6 +70,7 @@
 <hole x="70.78999999999999" y="90.348" drill="0.6"/>
 <text x="68.25" y="90.856" size="1.778" layer="21" rot="R180">text</text>
 <text x="64.186" y="94.92" size="1.778" layer="22" rot="MR180">text</text>
+<rectangle x1="80.696" y1="93.904" x2="74.346" y2="89.332" layer="16"/>
 <wire x1="0.0" y1="100.0" x2="27.94" y2="100.0" width="0.2032" layer="20"/>
 <wire x1="27.94" y1="100.0" x2="27.94" y2="59.36" width="0.2032" layer="20"/>
 <wire x1="27.94" y1="59.36" x2="0.0" y2="59.36" width="0.2032" layer="20"/>
@@ -75,6 +78,7 @@
 <hole x="9.652" y="70.78999999999999" drill="0.6"/>
 <text x="9.144" y="68.25" size="1.778" layer="21" rot="R270">text</text>
 <text x="5.08" y="64.186" size="1.778" layer="22" rot="MR90">text</text>
+<rectangle x1="6.096" y1="80.696" x2="10.668" y2="74.346" layer="16"/>
 </plain><libraries><library name="rcl">
 <description>&lt;b&gt;Resistors, Capacitors, Inductors&lt;/b&gt;&lt;p&gt;
 Based on the previous libraries:
