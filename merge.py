@@ -305,6 +305,12 @@ def update_routing(el, infile):
     elif el.tag == "circle":
         # in plain
         update_xml_routing_pos(el, "x", "y", infile)
+    elif el.tag == "rectangle":
+        # in plain
+        update_xml_routing_pos(el, "x1", "y1", infile)
+        update_xml_routing_pos(el, "x2", "y2", infile)
+        # note that we are ignoring rotation as it will be dealt with by
+        # changing the positions of the corners of the rectangle
     elif el.tag == "frame":
         # in plain
         update_xml_routing_pos(el, "x1", "y1", infile)
