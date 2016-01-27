@@ -335,7 +335,7 @@ def update_routing(el, infile):
         # in element
         pass
     else:
-        print_file_error_and_exit(infile, child)
+        print_file_error_and_exit(infile, el)
 
 # Hides the current name label and adds a custom label that is displayed as if
 # the element has old_name.
