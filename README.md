@@ -3,7 +3,7 @@ Overview
 --------
 
 This command-line tool merges several board files produced by CadSoft Eagle CAD
-software into one, effectively reimplementing the panelize.url script included
+software into one, effectively reimplementing the panelize.ulp script included
 in the program itself, but without the board size limit in the light and
 freeware editions of the program.
 
@@ -19,18 +19,19 @@ Operation
 ---------
 
 The tool copies the board data optionally rotating the board and adding a
-position offset to the coordinates. The included component data is currectly
+position offset to the coordinates. The included component data is correctly
 merged.
 
 If several input files use the same component from the same library, the
-duplicates are removed. The user must ensure that the input files use up-ta
+duplicates are removed. The user must ensure that the input files use up-to
 date libraries. If there is a mismatch between the definitions of the same
 component used in different files, the program aborts.
 
 The tool may change signal or element names to ensure that resulting output file
 does not have signals or elements with duplicate names. This is required by
 Eagle. Whenever element name is changed, the tool ensures that the displayed
-label stays the same by introducing a custom attribute.
+label stays the same by introducing a custom attribute which is displayed
+instead of the name attribute.
 
 All input files should use the same design rules. If there is a mismatch, the
 program aborts.
