@@ -357,8 +357,8 @@ def append_xml_plain(out_el, in_el, infile):
 
     for child in in_el:
         new_child = deepcopy(child)
-        update_routing(new_child, infile)
         out_el.append(new_child)
+        update_routing(new_child, infile)
 
     if len(in_el.attrib) > 0:
         print_file_error_and_exit(infile, in_el, "Unexpected attributes")
