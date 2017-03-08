@@ -38,7 +38,18 @@ class InputFile:
 
 def print_usage_and_exit():
     print('''Usage:
-    merge.py output-file [in-file [--offx offset-x] [--offy offset-y] [--rotation rotation]]...
+    ./merge.py output-file [input-file [-x offset-x] [-y offset-y] [-r rotation]] ...
+    output-file         Path to the output .brd file
+    input-file          Path to an input .brd file
+    -x, --offx          The x offset to apply to the input file. Add mm suffix
+    -y, --offy          The y offset to apply to the input file. Add mm suffix
+    -r, --rotation      The counter-clockwise rotation to apply to the input file [0, 90, 180, 270]
+
+Examples:
+    ./merge.py test_out.brd test_in.brd
+    ./merge.py test_out.brd test_in.brd -x 100mm -y 100mm -r 180
+    ./merge.py test_out.brd test_in.brd test_in.brd --offx 100mm --rotation 90
+    ./merge.py test_out.brd test_in.brd test_in.brd --offx 100mm --rotation 90 test_in.brd -x 100mm -y 100mm -r 180 test_in.brd --offy 100mm --rotation 270
     ''')
     sys.exit(1)
 
@@ -76,6 +87,8 @@ def fetch_arg(num):
 def parse_args():
 
     outfile = fetch_arg(1)
+    if (outfile == '-h'):
+        print_usage_and_exit()
     infiles = []
     infile = None
 
@@ -84,11 +97,11 @@ def parse_args():
         arg = fetch_arg(i)
         if arg.startswith('-'):
             # Apply one option to current input file
-            if arg == '--offx':
+            if arg == '--offx' or arg == '-x':
                 infile.offsetx = parse_offset(fetch_arg(i+1))
-            elif arg == '--offy':
+            elif arg == '--offy' or arg == '-y':
                 infile.offsety = parse_offset(fetch_arg(i+1))
-            elif arg == '--rotation':
+            elif arg == '--rotation' or arg == '-r':
                 infile.rotation = parse_rotation(fetch_arg(i+1))
             else:
                 print("Unsupported option {0}".format(arg))
