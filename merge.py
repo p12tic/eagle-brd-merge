@@ -437,7 +437,7 @@ def append_xml_elements(out_el, in_el, element_map, infile):
             postfix = ""
             postfix_num = 1
             while find_child(out_el, "element", { "name" : name + postfix }) != None:
-                postfix = str(postfix_num)
+                postfix = "_" + str(postfix_num)
                 postfix_num += 1
             name = name + postfix
 
