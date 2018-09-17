@@ -43,16 +43,25 @@ whenever unsupported feature is encountered.
 Usage
 -----
 
-    merge.py output-file [in-file [--offx offset-x] [--offy offset-y] [--rotation rotation]]...
+    merge.py output-file [input-file [-x offset-x] [-y offset-y] [-r rotation]] ...
 
  - `output-file`: path to the output .brd file
- - `in-file`: path to an input .brd file
- - `offset-x`, `offset-y`: the position offset to apply to the particular input file.
+ - `input-file`: path to an input .brd file
+ - `-x`, `--offx`: the x position offset to apply to the particular input file.
    The suffix determines the units. The following suffixes are supported:
      - mm: millimeters
- - `rotation`: The counter-clockwise rotation in degrees to apply to the
+ - `-y`, `--offy`: the y position offset to apply to the particular input file.
+   The suffix determines the units. The following suffixes are supported:
+     - mm: millimeters
+ - `-r`, `--rotation`: The counter-clockwise rotation in degrees to apply to the
    particular input file. The following values are supported: `0`, `90`, `180`
    and `270`.
+
+ - Examples:  
+    `./merge.py test_out.brd test_in.brd`  
+    `./merge.py test_out.brd test_in.brd -x 100mm -y 100mm -r 180`  
+    `./merge.py test_out.brd test_in.brd test_in.brd --offx 100mm --rotation 90`  
+    `./merge.py test_out.brd test_in.brd test_in.brd --offx 100mm --rotation 90 test_in.brd -x 100mm -y 100mm -r 180 test_in.brd --offy 100mm --rotation 270`  
 
 Requirements
 ------------
